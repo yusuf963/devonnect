@@ -9,7 +9,7 @@ const connectDB = async()=>{
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
-        console.log('Mongoose connected to ' + db);
+        console.log('Mongoose connected..');
 
     }catch(err){
         console.log(err.message);
