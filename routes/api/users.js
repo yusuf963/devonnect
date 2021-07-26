@@ -5,7 +5,7 @@ const router = express.Router();
 // @authorization fals
 // @access_level public
 // @description Return the current user
-router.get('/',(req, res)=>{
-    res.send('Auth Route!')
-})
+
+router.get('/', (req,res)=> res.send('User Route!'));
+
 module.exports = router;

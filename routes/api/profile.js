@@ -5,7 +5,7 @@ const router = express.Router();
 // @authorization fals
 // @access_level public
 // @description Return the profile
-router.get('/profile', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Profile Route!')
 })
 
