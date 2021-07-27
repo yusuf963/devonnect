@@ -2,8 +2,10 @@ const express = require('express');
 const router = express.Router();
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const {check, validationResult} = require('express-validator');
 const User = require('../../models/User')
+const config = require('config');          
 
 // @route Post api/user
 // @access_level public
@@ -42,12 +44,25 @@ router.post(
         user.password = await bcrypt.hash(password, salt);
         await user.save();
 
+        const paylaod = {
+            user:{
+                id: user.id
+            }
+        }
+        jwt.sign(
+            paylaod, 
+            config.get('jwtSecret'),
+            // {expiresIn: '1h'},
+            (err, token)=>{
+                if(err) throw err;
+                res.json({token})
+            });
 
     }catch(err){
-        return res.status(500).send('Server error', err);
+        console.log(err);
+        return res.status(500).send('server error');
     }
-    // console.log(req.body);
-    res.send('User Route!')
+     console.log(req.body);
 });
 
 module.exports = router;

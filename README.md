@@ -6,3 +6,7 @@ express express-validator bycrptjs cofig gravatar jsonwebtoken mongoose request
 
 for devDependencies 
 npm i -D nodemon concurrently
+
+
+**to run the server run the command**
+npm run server

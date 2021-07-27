@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://yusuf123:yusuf123@devonnectCl.rmjl5.mongodb.net/devonnectCL?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://yusuf123:yusuf123@devonnectCl.rmjl5.mongodb.net/devonnectCL?retryWrites=true&w=majority",
+    "jwtSecret": "ibrahimovicisthebest"
 }
