@@ -1,6 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://yusuf123:yusuf123@devonnectCl.rmjl5.mongodb.net/devonnectCL?retryWrites=true&w=majority",
-    "jwtSecret": "ibrahimovicisthebest",
-    "githubclientid": "c1e67b86bfd2a53f9839",
-    "githubclinetsecret": "3713049df28cc099a7031f2764e0ca4365bcc80f"
-}
